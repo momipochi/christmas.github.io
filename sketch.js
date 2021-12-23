@@ -20,13 +20,24 @@ function draw() {
  fill(255)
   rect(0,285,400,250)
   fill(0,255,0)
+  noStroke()
   var msg = 'MERRY CHRISTMAS';
+  var msg2 = 'wesołych świąt'
+  msg2 = msg2.toUpperCase()
+  
   text(msg, 100, 100);
   textSize(20)
-  fill(255,0,0)
+  fill(0,255,0)
+
+  text(msg2, 100, 120);
+  textSize(20)
   var msg = 'AND A HAPPY NEW YEAR'
-text(msg,70,350)
-  fill(255);
+  var msg2 = 'i szczęśliwego nowego roku'
+  msg2 = msg2.toUpperCase()
+  fill(255,0,0);
+  text(msg,70,350)
+  
+  text(msg2,50,370)
   noStroke();
   // for loop
   for (var i = 0; i < 30; i++) {
