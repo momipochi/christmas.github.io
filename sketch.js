@@ -1,13 +1,13 @@
 function preload() {
   soundFormats('mp3', 'ogg');
-  mySound = loadSound('Glee - Jingle Bell Rock (Lyrics).mp3');
+  mySound = loadSound('./Glee - Jingle Bell Rock (Lyrics).mp3');
 }
 
 function setup() {
   createCanvas(400, 400);
   frameRate(10);
  var snow =[]
- mySound.setVolume(0.1);
+ mySound.setVolume(0.2);
   mySound.play();
 }
 
