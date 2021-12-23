@@ -2,17 +2,32 @@ function preload() {
   soundFormats('mp3', 'ogg');
   mySound = loadSound('./Glee - Jingle Bell Rock (Lyrics).mp3');
 }
-
+var pressed = false
 function setup() {
   createCanvas(400, 400);
   frameRate(10);
  var snow =[]
  mySound.setVolume(0.2);
-  mySound.play();
+  
 }
 
 function draw() {
-  background(0);
+  
+  if(!pressed){
+    background(0);
+    msg = 'press me'
+    msg2 = 'naciśnij mnie'
+    fill(255,255,255)
+    textSize(20)
+    text(msg, 100, 100);
+    fill(255,255,255)
+    textSize(20)
+    text(msg2, 100, 120)
+  }else{
+    if(mySound.paused){
+      mySound.play()
+    }
+    background(0);
   fill(145,66,15)
   rect(50,250,60,250)
   fill(148,2,0)
@@ -82,6 +97,7 @@ fill(165,82,42)
     
 
   }
+  }
   
 
 } 
@@ -95,7 +111,12 @@ function drawTriangle() {
 }
 
 
-
+function mouseClicked() {
+  if(!pressed){
+    pressed = true
+    mySound.play();
+  }
+}
 
 
 
