@@ -15,8 +15,8 @@ function draw() {
   
   if(!pressed){
     background(0);
-    msg = 'press me'
-    msg2 = 'naciśnij mnie'
+    msg = 'press me, and turn on sound'
+    msg2 = 'naciśnij mnie, i włącz dźwięk'
     fill(255,255,255)
     textSize(20)
     text(msg, 100, 100);
@@ -24,9 +24,6 @@ function draw() {
     textSize(20)
     text(msg2, 100, 120)
   }else{
-    if(mySound.paused){
-      mySound.play()
-    }
     background(0);
   fill(145,66,15)
   rect(50,250,60,250)
